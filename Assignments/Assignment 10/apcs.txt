@@ -1,0 +1,39 @@
+Consider the tree on the T-Shirt as representing a Huffman Tree, in which the digit 0 represents moving left up the tree and the digit 1 represents moving right. The binary sequence at the bottom provides an appropriate caption for the person sitting under the tree.
+
+001010110111100001101110001011100
+
+00
+g
+1010
+o
+110
+n
+111
+e
+1000
+f
+01
+i
+1011
+s
+1001
+h
+01
+i
+110
+n
+00
+g
+
+________
+00   : g
+1010 : o
+110  : n
+111  : e
+1000 : f
+01   : i
+1011 : s
+1001 : h
+01   : i
+110  : n
+00   : g

@@ -1,0 +1,40 @@
+\chapter{Notes}
+\hypertarget{md__notes}{}\label{md__notes}\index{Notes@{Notes}}
+The microanalysis you\textquotesingle{}ve presented appears to be an attempt to break down the operations of the function {\ttfamily run2} into individual steps with different cost factors, where {\ttfamily A}, {\ttfamily B}, and {\ttfamily P} likely represent different constant time operations. Let\textquotesingle{}s interpret and refine this analysis\+:
+
+
+\begin{DoxyEnumerate}
+\item {\ttfamily int sum = 0;}\+: Initialization of {\ttfamily sum} can be considered a constant time operation. Let\textquotesingle{}s denote this as {\ttfamily A}.
+\item {\ttfamily for (int i=0 ; i \texorpdfstring{$<$}{<} n ; i++) sum++;}\+: The for-\/loop consists of several operations\+:
+\begin{DoxyItemize}
+\item Initializing {\ttfamily i} to {\ttfamily 0} (a constant time operation, which can be included in the earlier {\ttfamily A}).
+\item Checking the condition {\ttfamily i \texorpdfstring{$<$}{<} n} for each iteration, {\ttfamily n+1} times in total (including the final check that breaks the loop). We can denote this check as {\ttfamily B} times {\ttfamily n+1}.
+\item Incrementing {\ttfamily i} and {\ttfamily sum} each {\ttfamily n} times. These operations are also constant time operations. Let\textquotesingle{}s denote them as {\ttfamily P} for each increment, so {\ttfamily 2P} times {\ttfamily n}.
+\end{DoxyItemize}
+\item {\ttfamily for (int j=0 ; j \texorpdfstring{$<$}{<}= n ; j++) sum++;}\+: This loop is similar to the first one\+:
+\begin{DoxyItemize}
+\item Initializing {\ttfamily j} to {\ttfamily 0} is another constant time operation, but it can be included in the initial {\ttfamily A}.
+\item The condition {\ttfamily j \texorpdfstring{$<$}{<}= n} is checked {\ttfamily n+1} times. Again, this can be considered as {\ttfamily B} times {\ttfamily n+1}.
+\item Incrementing {\ttfamily j} and {\ttfamily sum} each {\ttfamily n+1} times. These are constant time operations, denoted as {\ttfamily 2P} times {\ttfamily n+1}.
+\end{DoxyItemize}
+\item {\ttfamily return sum;}\+: Returning a value is a constant time operation, which we can include in the initial {\ttfamily A}.
+\end{DoxyEnumerate}
+
+Putting it all together, the total cost of the function can be calculated as\+:
+
+
+\begin{DoxyItemize}
+\item Initialization\+: ( A ) (including the return and initialization of {\ttfamily i} and {\ttfamily j}).
+\item Loop checks\+: ( B(n+1) + B(n+1) = 2B(n+1) ).
+\item Increments\+: ( 2Pn + 2P(n+1) = 2Pn + 2Pn + 2P = 4Pn + 2P ).
+\end{DoxyItemize}
+
+So the total cost is\+:
+
+\mbox{[} A + 2B(n+1) + 4Pn + 2P \mbox{]}
+
+Simplifying, we get\+:
+
+\mbox{[} A + 2Bn + 2B + 4Pn + 2P = A + 2B + 2P + (2B + 4P)n \mbox{]}
+
+This breakdown is a detailed way of analyzing the function\textquotesingle{}s operations, but for standard algorithm complexity analysis (such as Big O notation), we generally focus on the highest-\/order term and omit constants. Therefore, the time complexity remains ( O(n) ). 

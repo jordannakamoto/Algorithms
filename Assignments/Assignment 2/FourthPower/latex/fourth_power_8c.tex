@@ -1,0 +1,82 @@
+\doxysection{fourth\+Power.\+c File Reference}
+\hypertarget{fourth_power_8c}{}\label{fourth_power_8c}\index{fourthPower.c@{fourthPower.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{fourth_power_8c_a212b785a47685595b8557fea20b30bd7}{readn}} ()
+\item 
+int \mbox{\hyperlink{fourth_power_8c_ab3cc2aaace6a1c54abb59effff0c8216}{compute\+Fourth}} (int n)
+\item 
+int \mbox{\hyperlink{fourth_power_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\DoxyHorRuler{0}
+ \begin{DoxyRemark}{Remarks}
+basic computation of input integer n to its forth power using \texorpdfstring{$\ast$}{*} recursive method. \texorpdfstring{$\ast$}{*} 
+\end{DoxyRemark}
+\begin{DoxyAuthor}{Author}
+Henry M. Walker \texorpdfstring{$\ast$}{*}
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+February 8, 2024 \texorpdfstring{$\ast$}{*}
+\begin{DoxyItemize}
+\item 
+\end{DoxyItemize}
+\end{DoxyDate}
+\begin{DoxyRemark}{Remarks}
+Compile this program in a Terminal window with the line \texorpdfstring{$\ast$}{*} gcc -\/o fourth\+Power \doxylink{fourth_power_8c}{fourth\+Power.\+c} \texorpdfstring{$\ast$}{*} 
+
+References \texorpdfstring{$\ast$}{*} 
+
+Analysis of Recursive Algorithms\+: Anany Levitin, "{}\+The Design and  \texorpdfstring{$\ast$}{*}         and Analysis of Algorithms"{}, Second Edition, \texorpdfstring{$\ast$}{*} Chapter 2\+: Fundamentals of the Analysis of Algorithm Efficiency \texorpdfstring{$\ast$}{*} 
+\end{DoxyRemark}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{fourth_power_8c_ab3cc2aaace6a1c54abb59effff0c8216}\label{fourth_power_8c_ab3cc2aaace6a1c54abb59effff0c8216} 
+\index{fourthPower.c@{fourthPower.c}!computeFourth@{computeFourth}}
+\index{computeFourth@{computeFourth}!fourthPower.c@{fourthPower.c}}
+\doxysubsubsection{\texorpdfstring{computeFourth()}{computeFourth()}}
+{\footnotesize\ttfamily int compute\+Fourth (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ compute the fourth power of a given integer recursively \texorpdfstring{$\ast$}{*} using polynomial expansion of (n-\/1)\texorpdfstring{$^\wedge$}{\string^}4 \texorpdfstring{$\ast$}{*}
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em n} & the integer to n to compute the Fourth Power of \texorpdfstring{$\ast$}{*} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the resultant fourth power of integer n. \texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{fourth_power_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{fourth_power_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{fourthPower.c@{fourthPower.c}!main@{main}}
+\index{main@{main}!fourthPower.c@{fourthPower.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ main procedure prompts user, computes fourth power, and prints result \texorpdfstring{$\ast$}{*}
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+int Program exit status. \texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{fourth_power_8c_a212b785a47685595b8557fea20b30bd7}\label{fourth_power_8c_a212b785a47685595b8557fea20b30bd7} 
+\index{fourthPower.c@{fourthPower.c}!readn@{readn}}
+\index{readn@{readn}!fourthPower.c@{fourthPower.c}}
+\doxysubsubsection{\texorpdfstring{readn()}{readn()}}
+{\footnotesize\ttfamily int readn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\DoxyHorRuler{0}
+ prompt the user to enter an integer value \textquotesingle{}n\textquotesingle{} and read input. \texorpdfstring{$\ast$}{*} \begin{DoxyReturn}{Returns}
+The integer value entered by the user. \texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
